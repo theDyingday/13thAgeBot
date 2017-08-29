@@ -1,0 +1,24 @@
+group '13thAgeBot'
+version '1.0-SNAPSHOT'
+
+apply plugin: 'java'
+apply from: 'https://raw.github.com/rartavia/gradle-plugins/master/xmlbeansPlugin/xmlbeans.gradle'
+
+
+sourceCompatibility = 1.5
+
+repositories {
+    mavenCentral()
+    jcenter()
+}
+
+configurations {
+    xmlbeans
+}
+
+dependencies {
+    testCompile group: 'junit', name: 'junit', version: '4.11'
+    compile 'net.dv8tion:JDA:3.0.0_157'
+    compile 'org.apache.poi:poi-ooxml:3.9'
+    compile 'org.apache.xmlbeans:xmlbeans:2.6.0'
+}
